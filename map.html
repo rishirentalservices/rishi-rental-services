@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Include Leaflet.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Add some custom styling for the map -->
+  <style>
+    /* Ensure the map container takes a proper height */
+    #map {
+      height: 400px; /* Adjust height of the map */
+      width: 100%;   /* Ensure map takes up full width */
+      margin-top: 20px; /* Optional: Adds space above the map */
+    }
+
+    /* Optional: Add some padding or margin to sections around the map */
+    .container {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Create the container for the map -->
+  <div class="container" id="map-container">
+    <h2 style="text-align: center; ">Our Location</h2>
+    <div id="map"></div>
+  </div>
+
+  <!-- Include Leaflet.js JavaScript -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+    // Initialize the map with coordinates of Candolim, Goa
+    var map = L.map('map', {
+        center: [15.513667, 73.766444],  // Set initial center
+        zoom: 13,  // Set the zoom level
+        zoomControl: false,  // Disable zoom control (optional)
+        scrollWheelZoom: false,  // Disable zoom with mouse scroll
+        dragging: true,  // Allow dragging
+        touchZoom: true  // Optional: Enable zoom on mobile devices
+    });
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add a marker to the map at Candolim
+    var marker = L.marker([15.513667, 73.766444]).addTo(map);
+
+    // Add a popup to the marker
+    marker.bindPopup("<b>Candolim, Goa</b>").openPopup();
+  </script>
+
+</body>
+</html>

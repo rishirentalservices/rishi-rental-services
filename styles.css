@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: #999090;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+    
+}
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    height: 200px; /* Adjust image height */
+    object-fit: cover; /* Ensures uniform image scaling */
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Enable Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Padding */
+section {
+    padding: 80px 20px;
+}
+
+/* Styling for Headings */
+h1 {
+    font-family: 'Dancing Script', cursive; /* Handwriting-style font */
+    font-size: 48px;
+    color: #f4f6f8;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: none;
+    letter-spacing: 1px;
+}
+
+/* Navbar brand text responsive */
+.navbar-brand{
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+@media (max-width:768px){
+
+    .navbar-brand{
+        font-size: 14px;
+        white-space: normal;
+        max-width: 200px;
+    }
+
+    .navbar-brand img{
+        width: 40px;
+        height: 35px;
+    }
+
+}
+
+/* Hero Section */
+.carousel-inner img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Services Section */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Card Styling */
+.card {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Custom Card Image */
+.card-img-custom {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* Pricing Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ffffff;
+}
+
+.table-dark {
+    background-color: #495057;
+}
+
+/* Navbar Logo */
+.navbar-brand img {
+    border-radius: 50%;
+}
+
+/* Map Container */
+#map-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#map-frame {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #343a40;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-img-custom {
+        max-height: 250px; /* Reduce height on smaller screens */
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .carousel-caption {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .table th, .table td {
+        font-size: 0.8rem;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
+
+/* Floating Message Styling */
+#floating-message {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1050;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: left;
+}
+#heroCarousel img{
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+@media (max-width:768px){
+  #heroCarousel img{
+    height: 250px;
+  }
+}

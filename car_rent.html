@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed information about our car rentals in Goa.">
+  <meta name="keywords" content="Goa Car Rentals, Rent Cars, Car Models, Rates">
+  <title>Rent Cars Details - Rishikesh Kandolkar Taxi Services</title>
+
+  
+  <!-- Favicon and Apple Touch Icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.jpg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    /* Fix carousel images inside the card */
+    .card .carousel-inner img {
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Ensures all images fit properly */
+        width: 100%; /* Ensures full width */
+    }
+
+    /* Ensure all cards have equal height */
+    .card {
+        height: 100%; /* Makes all cards uniform */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ensure card body expands properly */
+    .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+      <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="logo.jpg" alt="Logo" width="50" height="40" class="me-2">
+            Rishi Goa Car and Bike Rentals
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="rent_bikes.html"><i class="fas fa-motorcycle"></i> Rent Bikes</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#location"><i class="fas fa-map-marker-alt"></i> Location</a>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  
+
+  <!-- Car Details Section -->
+<div class="container mt-5 pt-5">
+    <h4 style="color: red;">Prices may vary during <strong style="color: black;">long weekends</strong> and <strong style="color: black;">festive periods</strong>, as rates fluctuate based on demand and seasonal surges.</h4>
+    <br><br>
+    <h2 class="text-center mb-4">Available Cars for Rent</h2>
+    <div class="row g-4">
+      <!-- Example Car 1 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="Swift.jpeg" class="card-img-top" alt="Swift" onclick="showImageModal(this)">
+          <div class="card-body">
+            <h5 class="card-title">Name: Maruti Swift</h5>
+            <p class="card-text">Model: Manual 2018</p> 
+            <p class="card-text" style="color: red;"><b>Price: 1000 per day</b></p>
+          
+            <p class="card-text">A compact, fuel-efficient car perfect for city and highway travel.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Example Car 2 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="i10.jpeg" class="card-img-top" alt="Car 2" onclick="showImageModal(this)">
+          <div class="card-body">
+            <h5 class="card-title">Name: i10</h5>
+            <p class="card-text">Model :2018 Model</p>
+            <p class="card-text" style="color: red;"><b>Price: ₹1000 per day</b></p>
+         
+            <p class="card-text">Built for adventure with power and stability.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="i20.jpeg" class="card-img-top" alt="Car 2" onclick="showImageModal(this)">
+          <div class="card-body">
+            <h5 class="card-title">Name: i20 Manual</h5>
+            <p class="card-text">Model :2016 Top Model</p>
+            <p class="card-text" style="color: red;"><b>Price: ₹1100 per day</b></p>
+            <p class="card-text">Spacious and comfortable for family trips.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Example Car 3 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <!-- Bootstrap Carousel -->
+          <div id="tharCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Convertible Model -->
+              <div class="carousel-item active">
+                <img src="thar_convertible.jpeg" class="d-block w-100" alt="Convertible Thar" onclick="showImageModal(this)">
+                <div class="carousel-caption d-block">
+                  <h5 class="car-overlay">Convertible</h5>
+                </div>
+              </div>
+              <!-- Diesel Hard Top Model -->
+              <div class="carousel-item">
+                <img src="thar_hardtop.png" class="d-block w-100" alt="Mahindra Thar Hard Top" onclick="showImageModal(this)">
+                <div class="carousel-caption d-block">
+                  <h5 class="car-overlay">Diesel Hard Top</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#tharCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#tharCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <!-- Card Body -->
+          <div class="card-body">
+            <h5 class="card-title">Name: Mahindra Thar</h5>
+            <p class="card-text">Available Models:</p>
+            <ul>
+              <li><b>Convertible (2022) - </b><b style="color: red;">₹3500 per day</b></li>
+              <li><b>Diesel Hard Top (2022) - </b><b style="color: red;">₹3000 per day</b></li>
+            </ul>
+            <p class="card-text">Powerful, rugged, and ready for adventure.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Example Car 4 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <!-- Bootstrap Carousel -->
+          <div id="crystaCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Auto Model -->
+              <div class="carousel-item active">
+                <img src="ertigaauto.jpeg" class="d-block w-100" alt="Ertiga Auto" onclick="showImageModal(this)">
+                <div class="carousel-caption d-block">
+                  <h5 class="car-overlay">Auto</h5>
+                </div>
+              </div>
+              <!-- Manual Model -->
+              <div class="carousel-item">
+                <img src="ertigamanual.jpeg" class="d-block w-100" alt="Ertiga Manual" onclick="showImageModal(this)">
+                <div class="carousel-caption d-block">
+                  <h5 class="car-overlay">Manual</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#crystaCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#crystaCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <!-- Card Body -->
+          <div class="card-body">
+            <h5 class="card-title">Name: Ertiga</h5>
+            <p class="card-text">Available Models:</p>
+            <ul>
+              <li><b>Auto (2022) -</b> <b style="color: red;">₹2500 per day</b></li>
+              <li><b>Manual (2020) -</b> <b style="color: red;">₹2300 per day</b></li>
+            </ul>
+            <p class="card-text">A smooth and luxurious ride for family vacations.</p>
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <!-- Example Car 5 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="hycross.png" class="card-img-top" alt="Hycross car" onclick="showImageModal(this)">
+          <div class="card-body">
+            <h5 class="card-title">Name: Hycross Auto (Petrol)</h5>
+            <p class="card-text">Model: 2024 model</p>
+            <p class="card-text" ><b>Price:</b> <b style="color: red;">₹3500 per day</b></p>
+            <p class="card-text">Perfect for off-road adventures and exploring Goa in style.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Example Car 6 -->
+      <div class="col-md-4">
+                  <div class="card shadow-sm">
+                    <!-- Bootstrap Carousel -->
+                    <div id="crystaCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <!-- Auto Model -->
+                        <div class="carousel-item active">
+                          <img src="CARS.jpeg" class="d-block w-100" alt="Crysta Auto" onclick="showImageModal(this)">
+                          <div class="carousel-caption d-block">
+                            <h5 class="car-overlay">Auto</h5>
+                          </div>
+                        </div>
+                        <!-- Manual Model -->
+                      <div class="carousel-item">
+                          <img src="crystamanual.jpeg" class="d-block w-100" alt="Crysta Manual" onclick="showImageModal(this)">
+                          <div class="carousel-caption d-block">
+                            <h5 class="car-overlay">Manual</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Carousel Controls -->
+                      <button class="carousel-control-prev" type="button" data-bs-target="#crystaCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#crystaCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      </button>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <h5 class="card-title">Name: Toyota Crysta</h5>
+                      <p class="card-text">Available Models:</p>
+                      <ul>
+                        <li><b>Auto (2022) - </b><b style="color: red;">₹2500 per day</b></li>
+                        <li><b>Manual (2020) -</b> <b style="color: red;">₹2300 per day</b></li>
+                      </ul>
+                      <p class="card-text">A bold choice for exploring new destinations.</p>
+                    </div>
+                  </div>
+      </div>
+      
+      <!-- Example Car 7 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <!-- Bootstrap Carousel -->
+          <div id="balenoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Auto Model -->
+              <div class="carousel-item active">
+                <img src="balenoauto.jpeg" class="d-block w-100" alt="Baleno Auto" onclick="showImageModal(this)">
+                <div class="carousel-caption d-block">
+                  <h5 class="car-overlay">Automatic</h5>
+                </div>
+              </div>
+              <!-- Manual Model -->
+              <div class="carousel-item">
+                <img src="baleno.jpeg" class="d-block w-100" alt="Baleno Manual" onclick="showImageModal(this)">
+                <div class="carousel-caption d-block">
+                  <h5 class="car-overlay">Manual</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#balenoCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#balenoCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+
+            <!-- Card Body -->
+            <div class="card-body">
+              <h5 class="card-title">Name: Baleno</h5>
+              <p class="card-text">Available Models:</p>
+              <ul>
+                <li><b>Auto (2024) - </b><b style="color: red;">₹1500 per day</b></li>
+                <li><b>Manual (2024) -</b><b style="color: red;">₹1500 per day</b></li>
+              </ul>
+              <p class="card-text">Perfect for city and beyond.</p>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <!-- Image Modal -->
+              <script>
+                  function showImageModal(imgElement) {
+                    const modalImg = document.getElementById('modalImage');
+                    modalImg.src = imgElement.src; // Set modal image source
+                    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+                    imageModal.show();
+                  }
+                </script>                
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="imageModalLabel">Car Image</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img id="modalImage" src="" class="img-fluid" alt="Car Image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+      
+     <!-- Floating Contact Message -->
+     <div id="floating-message" align="center">
+      <p class="mb-0" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">To Rent -> Contact Us: <strong>+91 9923906445, 8551966445</strong></p>
+    </div>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <p>Contact Us: +91 9923906445, 8551966445</p>
+      <p>&copy; 2025 Rishikesh Kandolkar Taxi Services. All Rights Reserved.</p>
+  </footer>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
